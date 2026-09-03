@@ -1,5 +1,3 @@
-# basic langchain program to use local model
-
 ##pip install langchain langchain-ollama langchain-openai
 
 #import the required packages
