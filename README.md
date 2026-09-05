@@ -5,4 +5,5 @@ Personal notes and small programs from an Agentic AI course.
 | Day | Notes | Topics |
 |-----|--------|--------|
 | 01 | [notes01.md](day01/notes01.md) | basic langchain code to call local ollama model and answer simple questions |
-| 02 | [notes02.md](day02/notes02.md) |  |
+| 02 | [notes02.md](day02/notes02.md) | Basic Tool Calling |
+| 03 | [notes03.md](day03/notes03.md) | Tools Creation using langchain.tools|
