@@ -1,22 +1,41 @@
-from langchain.chat_models import init_chat_model
+"""
+.env file content
+
+MODEL_PROVIDER=ollama
+MODEL=llama3.2:3b
+"""
+from langchain_ollama import ChatOllama
+from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 import os
 
 # load all the configurations from .env file
 load_dotenv()
 
-# get the configuration
-model = os.environ['MODEL']
-model_provider = os.environ['MODEL_PROVIDER']
+provider = os.environ['MODEL_PROVIDER']
+print(f"provider = {provider}")
 
-# create the llm connection
-llm = init_chat_model(model=model, model_provider=model_provider)
+if provider == 'ollama':
+    # create an instance of ChatOllama
+    llm = ChatOllama(
+        # model name
+        model="llama3.2:3b"
+    )
+elif provider == 'openai':
+    llm = ChatOpenAI(model="gpt-4")
 
-# get input from user
-query = input("> ")
+# infinite loop
+while True:
 
-# send the query to the model
-response = llm.invoke(query)
+    # user prompt
+    prompt = input("> ")
 
-# print the response
-print(response.content)
+    # check if user wants to exit
+    if prompt in ["exit", "quit", "q", "stop", "bye","end"]:
+        break
+
+    # send the prompt to the model and generate the answer
+    response = llm.invoke(prompt)
+
+    # print the repsonse
+    print(response.content)
