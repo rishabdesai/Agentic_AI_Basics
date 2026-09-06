@@ -8,7 +8,7 @@ Personal notes and small programs from an Agentic AI course.
 | 02 | [notes02.md](day02/notes02.md) | Basic Tool creation |
 | 03 | [notes03.md](day03/notes03.md) | Multiple Tools Creation & tool calling using langchain.tools|
 | 04 | [notes04.md](day04/notes04.md) | Creates basic AgenticAI Agent |
-| 05 | [notes04.md](day05/notes05.md) | |
+| 05 | [notes05.md](day05/notes05.md) | Agent memory | 
 
 
 ---
